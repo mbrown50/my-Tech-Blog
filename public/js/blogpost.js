@@ -12,35 +12,22 @@ const newFormHandler = async (event) => {
         'Content-Type': 'application/json',
       },
     });
-
     if (response.ok) {
-      document.location.replace('/profile');
+      document.location.replace('/dashboard');
     } else {
       alert('Failed to create blog post');
     }
   }
 };
 
-const delButtonHandler = async (event) => {
-  if (event.target.hasAttribute('data-id')) {
-    const id = event.target.getAttribute('data-id');
-
-    const response = await fetch(`/api/blogs/${id}`, {
-      method: 'DELETE',
-    });
-
-    if (response.ok) {
-      document.location.replace('/profile');
-    } else {
-      alert('Failed to delete blog');
-    }
-  }
+const goDashboardHandler = async (event) => {
+  document.location.replace('/dashboard');
 };
 
 document
   .querySelector('.new-blog-form')
-  .addEventListener('submit', newFormHandler);
+  .addEventListener('click', newFormHandler);
 
 document
-  .querySelector('.blog-list')
-  .addEventListener('click', delButtonHandler);
+  .querySelector('.blog-cancel')
+  .addEventListener('click', goDashboardHandler);

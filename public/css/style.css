@@ -1,4 +1,5 @@
-header, .blog:not(:last-child) {
+header,
+.blog:not(:last-child) {
   border-bottom: 1px solid #ccc;
 }
 
@@ -34,4 +35,13 @@ footer p {
 
 p.posted-by {
   font-size: small;
+}
+
+.mb-20 {
+  border-top: 1px solid #ccc;
+  padding: 10px;
+}
+
+.blogBtn {
+  text-align: center;
 }
