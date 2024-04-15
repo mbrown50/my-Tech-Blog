@@ -1,0 +1,21 @@
+<div class="row">
+  <div class="col-auto">
+    <h2>Welcome, {{user.name}}!</h2>
+  </div>
+</div>
+<div class="row mt-4">
+  <div cclass="col-md-6">
+    <h3>Comment:</h3>
+    <form class="form new-comment-form">
+      <div class="form-group">
+        <label for="comment-comment">Comment on blog: {{blog.title}}</label>
+        <textarea class="form-input" id="comment-comment" name="comment-comment"></textarea>
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary comment-create" data-id="{{blog.id}}">Create</button>
+      </div>
+    </form>
+    <button class=" btn btn-primary comment-cancel">Cancel</button>
+      </div>
+  </div>
+  <script src="../js/commentpost.js"></script>

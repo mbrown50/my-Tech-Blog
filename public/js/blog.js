@@ -39,20 +39,23 @@ const goDashboardHandler = async (event) => {
   document.location.replace('/dashboard');
 };
 
-let el1 = document
-  .querySelector('.blog-edit');
+const goCommentHandler = async (event) => {
+  const id = event.target.getAttribute('data-id');
+  document.location.replace(`/commentpost/${id}`);
+};
+
 document
   .querySelector('.blog-edit')
   .addEventListener('click', editFormHandler);
 
-let el2 = document
-  .querySelector('.blog-delete');
 document
   .querySelector('.blog-delete')
   .addEventListener('click', delButtonHandler);
 
-let el3 = document
-  .querySelector('.blog-cancel');
 document
   .querySelector('.blog-cancel')
   .addEventListener('click', goDashboardHandler);
+
+document
+  .querySelector('.blog-comment')
+  .addEventListener('click', goCommentHandler);
