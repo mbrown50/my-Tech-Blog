@@ -29,15 +29,13 @@
   
   License: MIT
   
-  Badge: https://img.shields.io/badge/License-MIT-yellow.svg
-  
-  Link: https://opensource.org/licenses/MIT
+  [<img src="https://img.shields.io/badge/License-MIT-yellow.svg">](https://opensource.org/licenses/MIT)
   
   ## Questions
-
-  Site Heroku: https://mysterious-inlet-83619-d941662cde82.herokuapp.com/
 
   GitHub username: mbrown50
 
   GitHub Repo: https://github.com/mbrown50/my-Tech-Blog
+
+  Site Heroku: https://mysterious-inlet-83619-d941662cde82.herokuapp.com/
  
