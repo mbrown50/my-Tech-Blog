@@ -10,6 +10,21 @@
 
   [Description](#description) | [License](#license) | [Questions](#questions)
 
+  Deployed techblog showing user creaet, blog create, comment create.
+  Shows buttons and functionality. Has blog edit, delete, and login.
+
+  ![Image of deployed site 1](./images/techblog.jpg "Deployed site")
+
+  ![Image of deployed site 1](./images/techblog2.jpg "Deployed site")
+
+  ![Image of deployed site 1](./images/techblog3.jpg" Deployed site")
+
+  ![Image of deployed site 1](./images/techblog4.jpg "Deployed site")
+
+  ![Image of deployed site 1](./images/techblog5.jpg "Deployed site")
+
+  ![Image of deployed site 1](./images/techblog6.jpg "Deployed site")
+
   ## License
   
   License: MIT
