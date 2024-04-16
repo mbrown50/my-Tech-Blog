@@ -5,11 +5,12 @@ const newFormHandler = async (event) => {
 
   if (event.target.hasAttribute('data-id')) {
     const blog_id = event.target.getAttribute('data-id');
+    const user_id = event.target.getAttribute('data-user')
 
     if (comment) {
-      const response = await fetch(`/api/comments/` + blog_id , {  // TEST
+      const response = await fetch(`/api/comments/` + blog_id , { 
         method: 'POST',
-        body: JSON.stringify({ comment, blog_id }),
+        body: JSON.stringify({ comment, blog_id, user_id }),
         headers: {
           'Content-Type': 'application/json',
         },

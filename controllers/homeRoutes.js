@@ -31,23 +31,33 @@ router.get('/', async (req, res) => {
 // get individual blog
 router.get('/blog/:id', async (req, res) => {
   try {
+
+    const userData = await Blog.findByPk(req.params.id, {
+      include: [{ model: User, attributes: ['name'], required: true }]
+    });
+
+    // Serialize data so the template can read it
+    const user = userData.get({ plain: true });
+
     const blogData = await Blog.findByPk(req.params.id, {
       include: [
+        User,
         {
-          model: User,
-          attributes: ['name'],
-        },
-      ],
-      include: [{ model: Comment }],
+          model: Comment,
+          include: [User]
+        }
+      ]
     });
 
     // Serialize data so the template can read it
     const blog = blogData.get({ plain: true });
 
     res.render('blog', {
+      ...user,
       ...blog,
       logged_in: req.session.logged_in
     });
+
 
   } catch (err) {
     res.status(500).json(err);
@@ -145,7 +155,7 @@ router.get('/commentpost/:id', withAuth, async (req, res) => {
     const user = userData.get({ plain: true });
 
     // get current blog data
-    const blogData = await Blog.findOne({ 
+    const blogData = await Blog.findOne({
       where: { id: req.params.id }
     });
 

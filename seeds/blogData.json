@@ -1,14 +1,17 @@
 [
   {
     "title": "Coding is fun",
-    "description": "Learning to code is fun"
+    "description": "Learning to code is fun",
+    "user_id": 1
   },
   {
     "title": "The Singularity is near",
-    "description": "Nothing to worry about folks"
+    "description": "Nothing to worry about folks",
+    "user_id": 2
   },
   {
     "title": "Uncanny Valley",
-    "description": "Robots are more life like then ever before"
+    "description": "Robots are more life like then ever before",
+    "user_id": 3
   }
 ]
